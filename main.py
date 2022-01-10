@@ -18,10 +18,10 @@ def countFrequency(text):
 
 # tworzenie drzewa
 def createTree(text):
-    occurences = countFrequency(text)
+    frequency = countFrequency(text)
     nodes = PriorityQueue()
-    for c in occurences.keys():  # dodajemy do listy
-        node = Node(occurences[c], c)
+    for c in frequency.keys():  # dodajemy do listy
+        node = Node(frequency[c], c)
         nodes.put(node)
     rootNode = None  # korzen drzewa
     while nodes.qsize() > 1:
